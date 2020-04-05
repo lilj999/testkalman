@@ -11,13 +11,9 @@ Wrapped API is simple as follows:
 
 KalmanFilterWrapper kalman=new KalmanFilterWrapper(0.1,1e-5); // measure noise and process noise. 
 
-while(...)
-
+while(...){
   double result=kalman.predict();  //predict
-  
   kalman.measure(list.get(i));     //update measuring data
-  
-  System.out.println("Original data:"+list.get(i)+" filtered result: "+result);
 }
 
 
