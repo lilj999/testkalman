@@ -1,13 +1,14 @@
 # testkalman
-A demostration for kalman filter by using java.
+A demostration for using the Kalman filter in openCV in java.
 
 To compile.
 1) Copy opencv_java341.dll to wndows/system32 or under the project.
 2) Add reference to opencv lib (I used opencv java version 3.4.1, though I believe that other versions should work too).
 3) Compile and run.
 
-API is simple as follows:
-KalmanFilterWrapper kalman=new KalmanFilterWrapper(0.1,1e-5);
+
+Wrapped API is simple as follows:
+KalmanFilterWrapper kalman=new KalmanFilterWrapper(0.1,1e-5); // measure noise and process noise. 
 while(...)
   double result=kalman.predict();  //predict
   kalman.measure(list.get(i));     //update measuring data
